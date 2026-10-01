@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bindette — サポート</title>
-<meta name="description" content="Mac、iPhone、iPad 用のオーディオブック作成 App、Bindette のヘルプです。">
+<meta name="description" content="Mac、iPhone、iPad、Android 用のオーディオブック作成 App、Bindette のヘルプです。">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="../icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../icon-180.png">
@@ -58,7 +58,7 @@
     <a href="./">ホーム</a>
     <a href="support.html">サポート</a>
     <a href="privacy.html">プライバシーポリシー</a>
-    <a href="mailto:khangazun@gmail.com?subject=Bindette%20support&body=What%20happened%3A%0A%0A%0AWhat%20I%20expected%20instead%3A%0A%0A%0ADetails%20that%20help%3A%0A-%20Mac%2C%20iPhone%20or%20iPad%3A%0A-%20macOS%20or%20iOS%20version%3A%0A-%20Bindette%20version%3A%0A">メールでサポート</a>
+    <a href="mailto:khangazun@gmail.com?subject=Bindette%20support&body=What%20happened%3A%0A%0A%0AWhat%20I%20expected%20instead%3A%0A%0A%0ADetails%20that%20help%3A%0A-%20Mac%2C%20iPhone%2C%20iPad%20or%20Android%3A%0A-%20macOS%2C%20iOS%20or%20Android%20version%3A%0A-%20Bindette%20version%3A%0A">メールでサポート</a>
     <!-- family:nav --><a href="./#more-apps">ほかのアプリ</a>
   <details class="family-lang"><summary aria-label="言語: 日本語"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.9 2.6 15.1 0 18M12 3c-2.6 2.9-2.6 15.1 0 18"/></svg><span>日本語</span></summary>
     <ul>
@@ -103,27 +103,27 @@
 
 <section class="card">
   <h2>お問い合わせ</h2>
-  <p><a href="mailto:khangazun@gmail.com?subject=Bindette%20support&body=What%20happened%3A%0A%0A%0AWhat%20I%20expected%20instead%3A%0A%0A%0ADetails%20that%20help%3A%0A-%20Mac%2C%20iPhone%20or%20iPad%3A%0A-%20macOS%20or%20iOS%20version%3A%0A-%20Bindette%20version%3A%0A">khangazun@gmail.com</a> までメールでどうぞ。リンクを開くと、短いテンプレートの入ったメッセージが作成されます。</p>
+  <p><a href="mailto:khangazun@gmail.com?subject=Bindette%20support&body=What%20happened%3A%0A%0A%0AWhat%20I%20expected%20instead%3A%0A%0A%0ADetails%20that%20help%3A%0A-%20Mac%2C%20iPhone%2C%20iPad%20or%20Android%3A%0A-%20macOS%2C%20iOS%20or%20Android%20version%3A%0A-%20Bindette%20version%3A%0A">khangazun@gmail.com</a> までメールでどうぞ。リンクを開くと、短いテンプレートの入ったメッセージが作成されます。</p>
 </section>
 
 <section class="card">
   <h2>よくある質問</h2>
   <h3>どんなファイルが使えますか？</h3>
-  <p>MP3、M4A、M4B、AAC、FLAC、WAV、AIFF、CAF に加え、システムがデコードできる場合は Opus と Ogg Vorbis も使えます（最近の macOS と iOS）。保護された（DRM 付きの）ファイルは読み込めません。</p>
+  <p>MP3、M4A、M4B、AAC、FLAC、WAV、AIFF、CAF に加え、システムがデコードできる場合は Opus と Ogg Vorbis も使えます（最近の macOS と iOS、および Android）。Android では CAF ファイルを読み込めないため、先に M4A か WAV に変換してください。保護された（DRM 付きの）ファイルは読み込めません。</p>
   <h3>パススルーとは何ですか？</h3>
   <p>すべてのファイルが同じ設定（同じサンプルレートとチャンネル数）の AAC なら、Bindette はデコードせずにオーディオをそのままブックにコピーします。音質はまったく落ちず、長い本でも数秒で完成します。それ以外の場合は、選んだビットレート、チャンネル、サンプルレートで AAC にエンコードします。それでもエンコードしたいときは<em>常にエンコード</em>を選んでください。</p>
   <h3>ファイルの順番が違います。</h3>
   <p>「ファイル」リストでドラッグして並べ替えるか、名前順、ディスクとトラック番号順、日付順で並べ替えてください。チャプターはファイルと一緒に移動します。</p>
   <h3>長いファイル 1 つをチャプターに分割できますか？</h3>
   <p>はい。<em>無音で分割</em>を使います。波形に無音区間が表示されるので、どのくらい静かで、どのくらい長ければ区切りとみなすかと、最も短いチャプターの長さを設定します。入力した時間でチャプターを分割したり、チャプターリスト（1 チャプターにつき「00:00:00 タイトル」の 1 行、または CUE シート）を読み込んだりすることもできます。</p>
-  <h3>iPhone と iPad では、ブックはどこにありますか？</h3>
-  <p>「ファイル」App の「このiPhone内」（または「このiPad内」）› Bindette › Books にあります。完成したブックの横にある共有ボタンで、「ブック」App、ほかのプレーヤー、または「ファイル」の任意のフォルダに送れます。</p>
+  <h3>iPhone、iPad、Android では、ブックはどこにありますか？</h3>
+  <p>「ファイル」App の「このiPhone内」（または「このiPad内」）› Bindette › Books にあります。完成したブックの横にある共有ボタンで、「ブック」App、ほかのプレーヤー、または「ファイル」の任意のフォルダに送れます。Android では、ブックを作成するたびに保存先を尋ねます。</p>
   <h3>ブックが再生できない、またはチャプターが表示されません。</h3>
   <p>Bindette は書き出したすべてのブックを検証し、問題があればお知らせします。お使いのプレーヤーと、入れたファイルの種類をお知らせください。ご自身が所有していない音声は送らないでください。</p>
 </section>
 
 <footer>
-<p>Mac、iPhone、iPad 用 Bindette · <a href="./">ホーム</a> · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシー</a> · <a href="mailto:khangazun@gmail.com?subject=Bindette%20support&body=What%20happened%3A%0A%0A%0AWhat%20I%20expected%20instead%3A%0A%0A%0ADetails%20that%20help%3A%0A-%20Mac%2C%20iPhone%20or%20iPad%3A%0A-%20macOS%20or%20iOS%20version%3A%0A-%20Bindette%20version%3A%0A">khangazun@gmail.com</a></p>
+<p>Mac、iPhone、iPad、Android 用 Bindette · <a href="./">ホーム</a> · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシー</a> · <a href="mailto:khangazun@gmail.com?subject=Bindette%20support&body=What%20happened%3A%0A%0A%0AWhat%20I%20expected%20instead%3A%0A%0A%0ADetails%20that%20help%3A%0A-%20Mac%2C%20iPhone%2C%20iPad%20or%20Android%3A%0A-%20macOS%2C%20iOS%20or%20Android%20version%3A%0A-%20Bindette%20version%3A%0A">khangazun@gmail.com</a></p>
 </footer>
 </main>
 </body>
