@@ -52,6 +52,7 @@
 <body>
 <main>
 <div class="hero">
+  <div class="hero-pill">🎧 Tạo sách nói M4B chuẩn chỉnh · Chia chương, bìa sách và lưu vị trí</div>
   <img class="icon" src="../icon-512.png" alt="" width="112" height="112">
   <h1>Bindette</h1>
   <p class="tagline">Biến các tệp âm thanh thành một cuốn sách nói hoàn chỉnh.</p>
@@ -108,6 +109,60 @@
   </details><!-- /family:nav -->
   </nav>
 </div>
+<div class="demo-wrapper" id="demo">
+  <div class="bindette-stage" role="group" aria-label="Bản demo tương tác: đóng gói audiobook M4B giữ nguyên chất lượng">
+    <div class="bindette-book-card">
+      <div class="bindette-header">
+        <div class="bindette-cover">🎙️</div>
+        <div class="bindette-title-wrap">
+          <div class="bindette-title">Kiến Trúc Của Tương Lai</div>
+          <div class="bindette-author">Marcus Vance · Giọng đọc Sarah Chen</div>
+        </div>
+      </div>
+      <div class="bindette-chapters">
+        <div class="bindette-ch-row">
+          <span>1. Mở đầu — Bản vẽ đầu tiên</span>
+          <span class="bindette-ch-dur">08:14</span>
+        </div>
+        <div class="bindette-ch-row">
+          <span>2. Chương 1 — Thép và ánh sáng</span>
+          <span class="bindette-ch-dur">18:42</span>
+        </div>
+        <div class="bindette-ch-row">
+          <span>3. Chương 2 — Chân trời bền vững</span>
+          <span class="bindette-ch-dur">24:15</span>
+        </div>
+        <div class="bindette-ch-row">
+          <span>4. Vĩ thanh — Hướng tới tương lai</span>
+          <span class="bindette-ch-dur">06:20</span>
+        </div>
+      </div>
+    </div>
+    <div class="demo-controls">
+      <button class="tockette-action-btn" id="bdBuildBtn">Đóng gói Audiobook M4B</button>
+    </div>
+    <span class="demo-hint">💡 Bấm Đóng gói Audiobook M4B để xem mô phỏng ghép chương không nén lại âm thanh</span>
+  </div>
+  <p class="demo-note">Mô phỏng trực quan. Trên Mac, iPhone và iPad, Bindette ghép các tệp âm thanh thành sách nói .m4b hoàn hảo cho Apple Books.</p>
+</div>
+<script>
+(function() {
+  var btn = document.getElementById('bdBuildBtn');
+  var isBuilding = false;
+  btn.addEventListener('click', function() {
+    if (isBuilding) return;
+    isBuilding = true;
+    btn.textContent = '... Lossless merging ...';
+    setTimeout(function() {
+      btn.textContent = "✓ Hoàn tất M4B (57p 31s)";
+      setTimeout(function() {
+        btn.textContent = "Đóng gói Audiobook M4B";
+        isBuilding = false;
+      }, 3000);
+    }, 1200);
+  });
+})();
+</script>
 
 <!-- family:shot --><figure class="shot"><img src="../img/hero.jpg" alt="" width="1600" height="860"></figure><!-- /family:shot -->
 <section class="card">
@@ -123,6 +178,48 @@
   <p class="note">Cần macOS 14 Sonoma trở lên; trên iPhone và iPad, cần iOS và iPadOS 17 trở lên; trên Android, cần Android 8.0 trở lên.</p>
 </section>
 
+<section class="card comparison-card" id="comparison">
+  <h2>Tệp MP3 rời rạc so với Bindette</h2>
+  <p class="section-lead">Biến hàng chục tệp ghi âm vụn vặt thành một cuốn audiobook M4B liền mạch, nhớ vị trí nghe.</p>
+  <div class="table-scroll">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Đặc tính</th>
+          <th>Thư mục MP3 rời rạc</th>
+          <th class="highlight-col">Bindette</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cấu trúc chương hồi</strong></td>
+          <td>Hàng chục tệp MP3 lung tung, đổi máy là mất vị trí nghe</td>
+          <td class="highlight-col"><strong>Một tệp .m4b duy nhất có mục lục chương bấm nhảy tức thì</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Thao tác ghép</strong></td>
+          <td>Gõ lệnh ffmpeg concat phức tạp dễ lỗi lệch thời lượng</td>
+          <td class="highlight-col"><strong>Kéo thả sắp xếp thứ tự chương trực quan và bấm 1 nút</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Chất lượng âm thanh</strong></td>
+          <td>Bị nén lại (re-encode) làm suy giảm chất âm và tốn thời gian</td>
+          <td class="highlight-col"><strong>Ghép nguyên bản (lossless stream copy) giữ nguyên 100% chất lượng</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Bìa sách & Tác giả</strong></td>
+          <td>Bị mất ảnh bìa hoặc thiếu tên tác giả/người đọc</td>
+          <td class="highlight-col"><strong>Nhúng ảnh bìa vuông sắc nét, tên người đọc và tác giả chuẩn</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Apple Books & Máy nghe</strong></td>
+          <td>Bị coi là bài hát nhạc, không có tính năng nhớ trang sách</td>
+          <td class="highlight-col"><strong>Được nhận diện là Audiobook chính thức trên Mac, iPhone, iPad</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 <section class="card">
   <h2>Quyền riêng tư trong một đoạn</h2>
   <p>Bindette không bao giờ kết nối Internet. Âm thanh, ảnh bìa và sách của bạn luôn nằm trên thiết bị của bạn. Không có tài khoản, không theo dõi, không phân tích, và không thu thập dữ liệu nào. <a href="privacy.html">Chính sách quyền riêng tư</a> đầy đủ cũng nói như vậy, chi tiết hơn.</p>

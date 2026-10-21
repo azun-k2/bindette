@@ -52,6 +52,7 @@
 <body>
 <main>
 <div class="hero">
+  <div class="hero-pill">🎧 Create M4B audiobooks · Chapters, cover art & smart metadata</div>
   <img class="icon" src="../icon-512.png" alt="" width="112" height="112">
   <h1>Bindette</h1>
   <p class="tagline">เปลี่ยนไฟล์เสียงให้เป็นหนังสือเสียงที่สมบูรณ์เพียงเล่มเดียว</p>
@@ -108,6 +109,60 @@
   </details><!-- /family:nav -->
   </nav>
 </div>
+<div class="demo-wrapper" id="demo">
+  <div class="bindette-stage" role="group" aria-label="Interactive demo: M4B audiobook chapter builder and lossless merge">
+    <div class="bindette-book-card">
+      <div class="bindette-header">
+        <div class="bindette-cover">🎙️</div>
+        <div class="bindette-title-wrap">
+          <div class="bindette-title">The Architecture of Tomorrow</div>
+          <div class="bindette-author">Marcus Vance · Narrated by Sarah Chen</div>
+        </div>
+      </div>
+      <div class="bindette-chapters">
+        <div class="bindette-ch-row">
+          <span>1. Prologue — The First Blueprint</span>
+          <span class="bindette-ch-dur">08:14</span>
+        </div>
+        <div class="bindette-ch-row">
+          <span>2. Chapter 1 — Steel and Light</span>
+          <span class="bindette-ch-dur">18:42</span>
+        </div>
+        <div class="bindette-ch-row">
+          <span>3. Chapter 2 — Sustainable Horizons</span>
+          <span class="bindette-ch-dur">24:15</span>
+        </div>
+        <div class="bindette-ch-row">
+          <span>4. Epilogue — Looking Ahead</span>
+          <span class="bindette-ch-dur">06:20</span>
+        </div>
+      </div>
+    </div>
+    <div class="demo-controls">
+      <button class="tockette-action-btn" id="bdBuildBtn">Build M4B Audiobook</button>
+    </div>
+    <span class="demo-hint">💡 Click Build M4B Audiobook to watch the chapter packing and lossless merge simulation</span>
+  </div>
+  <p class="demo-note">Visual simulation. On Mac, iPhone and iPad, Bindette losslessly joins audio files into a native .m4b audiobook with bookmark memory.</p>
+</div>
+<script>
+(function() {
+  var btn = document.getElementById('bdBuildBtn');
+  var isBuilding = false;
+  btn.addEventListener('click', function() {
+    if (isBuilding) return;
+    isBuilding = true;
+    btn.textContent = '... Lossless merging ...';
+    setTimeout(function() {
+      btn.textContent = "✓ M4B Ready (57m 31s)";
+      setTimeout(function() {
+        btn.textContent = "Build M4B Audiobook";
+        isBuilding = false;
+      }, 3000);
+    }, 1200);
+  });
+})();
+</script>
 
 <!-- family:shot --><figure class="shot"><img src="../img/hero.jpg" alt="" width="1600" height="860"></figure><!-- /family:shot -->
 <section class="card">
@@ -123,6 +178,48 @@
   <p class="note">ต้องใช้ macOS 14 Sonoma ขึ้นไป ส่วนบน iPhone และ iPad ต้องใช้ iOS และ iPadOS 17 ขึ้นไป และบน Android ต้องใช้ Android 8.0 ขึ้นไป</p>
 </section>
 
+<section class="card comparison-card" id="comparison">
+  <h2>Loose audio files vs Bindette</h2>
+  <p class="section-lead">Turn fragmented voice recordings and audio files into a polished M4B audiobook.</p>
+  <div class="table-scroll">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>Loose MP3s / ffmpeg Scripts</th>
+          <th class="highlight-col">Bindette</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Chapter Indexing</strong></td>
+          <td>Dozens of loose MP3 files with no book memory</td>
+          <td class="highlight-col"><strong>Single unified .m4b file with clickable chapters & bookmarks</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Assembly Effort</strong></td>
+          <td>Manual ffmpeg concat demuxer CLI scripts</td>
+          <td class="highlight-col"><strong>Drag audio files in order, adjust titles, and click build</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Audio Fidelity</strong></td>
+          <td>Re-encoding compresses audio and loses quality</td>
+          <td class="highlight-col"><strong>Lossless stream copy when formats match, preserving original sound</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Artwork & Meta</strong></td>
+          <td>Missing book covers and broken ID3 metadata</td>
+          <td class="highlight-col"><strong>Embeds hi-res square cover art, author, and chapter markers</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Apple Books</strong></td>
+          <td>Requires manual sync workarounds and renaming</td>
+          <td class="highlight-col"><strong>Native audiobook format recognized instantly on Mac, iPhone & iPad</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 <section class="card">
   <h2>ความเป็นส่วนตัวในย่อหน้าเดียว</h2>
   <p>Bindette ไม่เชื่อมต่ออินเทอร์เน็ตเลย เสียง ปก และหนังสือของคุณอยู่บนอุปกรณ์ของคุณ ไม่มีบัญชี ไม่มีการติดตาม ไม่มีการวิเคราะห์ และไม่มีการเก็บข้อมูลใดๆ <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>ฉบับเต็มก็กล่าวไว้เช่นเดียวกันอย่างละเอียดกว่า</p>
